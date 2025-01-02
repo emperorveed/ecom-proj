@@ -1,10 +1,7 @@
 package com.veed.ecom_proj.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,6 +27,27 @@ public class Product {
     private boolean available;
     private int quantity;
 
+    private String imageName;
+    private String imageType;
+
+    @Lob
+    private byte[] imageData;
 
 
+    public void setImageName(String originalFilename) {
+    }
+
+    public void setImageType(String contentType) {
+    }
+
+    public void setImageDate(byte[] bytes) {
+    }
+
+    public byte[] getImageData() {
+        return imageData;
+    }
+
+    public String getImageType() {
+        return imageType;
+    }
 }
