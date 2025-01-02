@@ -43,4 +43,8 @@ public class ProductService {
 
         repository.deleteById(id);
     }
+
+    public List<Product> searchProducts(String keyword) {
+        return repository.searchProducts(keyword);
+    }
 }
